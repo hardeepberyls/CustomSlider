@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .wrapper {
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .wrapper ul {
+            padding: 0px;
+            width: 35%;
+            margin: 0 auto;
+        }
+
+        .wrapper ul li {
+            list-style-type: none;
+            display: inline-block;
+            width: 20%;
+            margin: 0px 10px;
+            position: relative;
+            transition: all .5s;
+            display: none;
+        }
+
+        .wrapper ul li img {
+            width: 50%;
+            opacity: 0.5;
+        }
+
+        .wrapper ul li.active {
+            position: absolute;
+            transform: translate(-50%, -58%);
+            left: 50%;
+            top: 50%;
+            opacity: 1;
+            transition: all .3s linear;
+            display: block;
+        }
+
+        .wrapper ul li.prevActive {
+            position: absolute;
+            left: 20%;
+            transform: translate(-100%, 0%);
+            transition: all .3s linear;
+            opacity: 0.5;
+            display: block;
+            top: 50%;
+        }
+
+        .wrapper ul li.prevActive .card_content,
+        .wrapper ul li.nextActive .card_content {
+            display: none;
+        }
+
+        .wrapper ul li.active .card_content {
+            display: block;
+        }
+
+        .wrapper ul li.nextActive {
+            position: absolute;
+            right: 20%;
+            transform: translate(100%, 0%);
+            transition: all .3s linear;
+            opacity: 0.5;
+            display: block;
+            top: 50%;
+        }
+
+        .card_img,
+        .card_name,
+        .card_price,
+        .card_discount,
+        .card_detail {
+            text-align: center;
+        }
+
+        .card_name h2 {
+            font-size: 32px;
+            margin: 0px;
+            font-weight: 600;
+            color: #000000;
+        }
+
+        .card_price h4 {
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0px;
+            border-top: 1px solid #000000;
+            display: inline-block;
+        }
+
+        .card_discount p {
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin: 0px 0px 10px;
+        }
+
+        .card_detail a {
+            font-size: 15px;
+            font-weight: 400;
+            margin: 0px;
+            text-transform: capitalize;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #000000;
+            color: #ffffff;
+            border-radius: 25px;
+        }
+
+        .card_price {
+            padding: 15px 0px;
+        }
+
+        .card_discount {
+            padding: 0px 0px 20px;
+        }
+
+        .card_img {
+            padding-bottom: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="wrap_card">
+            <ul>
+                <li class="prevActive">
+                    <div class="card_wrap">
+                        <div class="card_img">
+                            <img src="images/img_1.png" alt="image" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card_name">
+                                <h2>Vintage & Antique</h2>
+                            </div>
+                            <div class="card_price">
+                                <h4>$4500</h4>
+                            </div>
+                            <div class="card_discount">
+                                <p>take 20% off for a limited time.</p>
+                                <p>use code <b>LOVE20</b></p>
+                            </div>
+                            <div class="card_detail">
+                                <a href="#">view details</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="active">
+                    <div class="card_wrap">
+                        <div class="card_img">
+                            <img src="images/img_2.png" alt="image" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card_name">
+                                <h2>Vintage & Antique</h2>
+                            </div>
+                            <div class="card_price">
+                                <h4>$3500</h4>
+                            </div>
+                            <div class="card_discount">
+                                <p>take 20% off for a limited time.</p>
+                                <p>use code <b>LOVE20</b></p>
+                            </div>
+                            <div class="card_detail">
+                                <a href="#">view details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li class="nextActive">
+                    <div class="card_wrap">
+                        <div class="card_img">
+                            <img src="images/img_3.png" alt="image" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card_name">
+                                <h2>Vintage & Antique</h2>
+                            </div>
+                            <div class="card_price">
+                                <h4>$10500</h4>
+                            </div>
+                            <div class="card_discount">
+                                <p>take 20% off for a limited time.</p>
+                                <p>use code <b>LOVE20</b></p>
+                            </div>
+                            <div class="card_detail">
+                                <a href="#">view details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="card_wrap">
+                        <div class="card_img">
+                            <img src="images/img_1.png" alt="image" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card_name">
+                                <h2>Vintage & Antique</h2>
+                            </div>
+                            <div class="card_price">
+                                <h4>$22500</h4>
+                            </div>
+                            <div class="card_discount">
+                                <p>take 20% off for a limited time.</p>
+                                <p>use code <b>LOVE20</b></p>
+                            </div>
+                            <div class="card_detail">
+                                <a href="#">view details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="card_wrap">
+                        <div class="card_img">
+                            <img src="images/img_2.png" alt="image" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card_name">
+                                <h2>Vintage & Antique</h2>
+                            </div>
+                            <div class="card_price">
+                                <h4>$5500</h4>
+                            </div>
+                            <div class="card_discount">
+                                <p>take 20% off for a limited time.</p>
+                                <p>use code <b>LOVE20</b></p>
+                            </div>
+                            <div class="card_detail">
+                                <a href="#">view details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+                <li>
+                    <div class="card_wrap">
+                        <div class="card_img">
+                            <img src="images/img_3.png" alt="image" />
+                        </div>
+                        <div class="card_content">
+                            <div class="card_name">
+                                <h2>Vintage & Antique</h2>
+                            </div>
+                            <div class="card_price">
+                                <h4>$7500</h4>
+                            </div>
+                            <div class="card_discount">
+                                <p>take 20% off for a limited time.</p>
+                                <p>use code <b>LOVE20</b></p>
+                            </div>
+                            <div class="card_detail">
+                                <a href="#">view details</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+
+        var slider = document.querySelectorAll(".wrap_card ul li");
+
+        for (i = 0; i < slider.length; i++) {
+            slider[i].addEventListener("click", function () {
+                for (let index = 0; index < slider.length; index++) {
+                    slider[index].classList.remove("active", "prevActive", "nextActive");
+                }
+                this.classList.add("active");
+
+                var currentElement = Array.from(slider).indexOf(this);
+
+                let prevElement = (currentElement - 1 + slider.length) % slider.length;
+                slider[prevElement].classList.add("prevActive");
+
+                let nextElement = (currentElement + 1 + slider.length) % slider.length;
+                slider[nextElement].classList.add("nextActive");
+            })
+        }
+    </script>
+</body>
+
+</html>
